@@ -10,10 +10,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // conexion a la base de datos
-mongoose.connect(process.env.MONGODB_URI, 
-    { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('Conectado a MongoDB'))
-    .catch(err => console.error('Error de conexión:', err));
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('Conectado a MongoDB'))
+  .catch(err => console.error('Error de conexión:', err));
 
 //Rutas de la API
 //Rutas para auth
